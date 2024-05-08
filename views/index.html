@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./../assets/css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 leftSide">
+                    <div class="leftSide-wrapper">
+                        <div class="leftSide-search">
+                            <form action="" class="leftSide-form">
+                                <input type="search" placeholder="Type a place to search" id="place"
+                                    class="leftSide-form__search" autocomplete="off">
+                            </form>
+                        </div>
+                        <div class="leftSide-place">
+                            <h2 class="leftSide-placeName" id="placeShown">
+
+                            </h2>
+                            <p class="leftSide-datetime">
+                                <span class="leftSide-time" id="timeShown">
+
+                                </span>
+                                <span>
+                                    -
+                                </span>
+                                <span class="leftSide-date" id="dateShown">
+
+                                </span>
+                            </p>
+                        </div>
+                        <div class="leftSide-info">
+                            <div class="leftSide-left">
+                                <p class="leftSide-left__temp">
+                                    <span id="tempShown"></span> °C
+                                </p>
+                            </div>
+                            <div class="leftSide-right">
+                                <div class="leftSide-group">
+                                    <span class="leftSide-group__title">
+                                        Chance of Rain
+                                    </span>
+                                    <div class="leftSide-group__info">
+                                        <span id="rainShown"></span> %
+                                    </div>
+                                </div>
+                                <div class="leftSide-group">
+                                    <span class="leftSide-group__title">
+                                        Humidity
+                                    </span>
+                                    <div class="leftSide-group__info">
+                                        <span id="humidityShown"></span> %
+                                    </div>
+                                </div>
+                                <div class="leftSide-group">
+                                    <span class="leftSide-group__title">
+                                        Speed of Wind
+                                    </span>
+                                    <div class="leftSide-group__info">
+                                        <span id="windShown"></span>
+                                        km/h
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 rightSide">
+                    <div class="rightSide-wrapper">
+                        <div class="rightSide-content">
+                            <h2 class="rightSide-content__heading">
+                                Weekly Weather
+                            </h2>
+                            <div class="rightSide-text" id="rightSideDisplay">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert" id="alert">
+            <p class="alert__text">
+                OOPS! Invalid Place!
+            </p>
+            <span id="alert__close">
+                <i class="fa-solid fa-x"></i>
+            </span>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <!-- My JS -->
+    <script src="./../controller/alert.js"></script>
+    <script type="module" src="./../controller/main.js"></script>
+</body>
+
+</html>
